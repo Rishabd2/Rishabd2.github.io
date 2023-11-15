@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/rishabd2.github.io/static/css/main.b47edf86.css",
+    "main.js": "/rishabd2.github.io/static/js/main.8d9ad2b3.js",
+    "static/media/student.png": "/rishabd2.github.io/static/media/student.3f2d9389e7ac3c26db26.png",
+    "index.html": "/rishabd2.github.io/index.html",
+    "main.b47edf86.css.map": "/rishabd2.github.io/static/css/main.b47edf86.css.map",
+    "main.8d9ad2b3.js.map": "/rishabd2.github.io/static/js/main.8d9ad2b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b47edf86.css",
+    "static/js/main.8d9ad2b3.js"
+  ]
+}
