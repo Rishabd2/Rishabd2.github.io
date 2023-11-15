@@ -2,12 +2,12 @@
   "name": "todo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rishabd2.github.io/rishabd2.github.io", 
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.21",
     "@fortawesome/free-solid-svg-icons": "^5.10.1",
-    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@fortawesome/react-fontawesome": "^0.1.4",  
     "axios": "^0.26.1",
-    "create-react-app": "^5.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.8.6",
     "react-scripts": "5.0.1",
@@ -15,12 +15,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && mv build docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "homepage": "https://Rishabd2.github.io/Rishabd2.github.io",
-    "build": "react-scripts build && mv build docs"
-    
+    "predeploy": "npm run build",
+    "basename": "https://rishabd2.github.io/rishabd2.github.io" 
   },
   "eslintConfig": {
     "extends": "react-app"
