@@ -1,0 +1,575 @@
+/* Figure out how to split these into multiple files for modularity. */
+
+
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #13294b;
+}
+
+.interview-list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 1em;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.sched-time {
+  font-size: 1em;
+}
+
+tr,
+td {
+  border: 1px dotted darkgray;
+}
+
+tr a {
+  color: #13294b;
+  text-align: center;
+  text-decoration: none;
+}
+
+tr a:hover {
+  text-decoration: #e84a27;
+  text-decoration-line: underline;
+}
+
+.main-logo {
+  padding-top: 10px;
+  text-align: center;
+  color: white;
+  z-index: 20;
+  font-size: 64px;
+  font-weight: 800;
+}
+/* Fact elements are awkwardly far apart on desktop */
+.facts_container {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+.fact {
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  width: 100%;
+  margin: 0px;
+  height: 4em;
+  box-shadow: 0px 6px 22px -9px rgba(0, 0, 0, 0.75);
+}
+
+.icon {
+  width: 20%;
+}
+
+nav img {
+  display: inline-block;
+}
+
+
+/* desktop */
+@media only screen and (min-width: 900px) {
+  .info {
+    font-size: 30px;
+  }
+
+  td {
+    padding: 20px;
+  }
+
+  .volunteer a {
+    border: #13294b solid 2px;
+    color: #13294b;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    margin: 0px 40%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  .interviewlocations a {
+    border: #13294b solid 2px;
+    color: #13294b;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    margin: 0px 40%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 1%;
+  }
+
+  .days a {
+    border: #13294b solid 2px;
+    color: #13294b;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 1%;
+  }
+
+  .virtual a {
+    border: #13294b solid 2px;
+    color: #13294b;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 2%;
+    
+  }
+  .schedule-container{
+    margin-top: 2%;
+    font-size: 75%;
+    margin-bottom: 2%;
+  }
+
+  .box-row{
+    display: flex;
+    width: auto;
+    justify-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  #calendar-icon{
+    width: 3%;
+    margin-top: 0%;
+  }
+  .loading{
+    margin-top: 3%;
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 900px) {
+  .main-logo {
+    text-align: center;
+    font-size: 100%;
+  }
+ 
+  .date-location {
+    font-size: 51%;
+    text-align: center;
+    padding-top: 14px;
+    font-family: "Montserrat", sans-serif;
+    margin: 0 5%;
+  }
+  .info {
+    font-size: 100%;
+  }
+  
+  
+
+  .volunteer a {
+    border: #13294b solid 2px;
+    color: #13294b;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    margin: 0px 10%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  .interviewlocations a {
+    border: #13294b solid 2px;
+    color: #13294b;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    margin: 0px 10%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  .days a {
+    border: #13294b solid 2px;
+    color: #13294b;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    margin: 0px 10%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  .virtual a {
+    border: #13294b solid 2px;
+    color: #13294b;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    margin: 0px 10%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+  .schedule-container{
+    font-size: 2.5vw;
+    margin-top: 5%;
+  }
+  .schedule-component{
+    margin-bottom: 1%;
+  }
+
+
+
+  #calendar-icon{
+    width: 10%;
+    margin-top: 7%;
+  }
+  .loading{
+    margin-top: 10%;
+  }
+}
+
+.temp {
+  display: flex;
+}
+
+.schedule-container{
+  display: flex;
+  flex-flow: column nowrap;
+  align-self: center;
+  width: 100%;  
+}
+.schedule-component{
+  display: flex;
+  flex-flow: row ;
+  width: 100%;
+}
+.schedule-container a {
+  text-decoration: none;
+}
+.schedule-container a:link {text-decoration: none;}
+.schedule-container a:visited {text-decoration: none;}
+
+.schedule-name{
+  width: 42.5%;
+  text-align: end;
+  flex-wrap: nowrap;
+  color: white;
+  
+}
+.schedule-date{
+  /* border: dotted 0.5px white; */
+  width: 15%;
+  
+  text-align: center;
+  color: #e84a27;
+}
+
+
+.schedule-location{
+  width: 40%;
+  display: flex;
+  text-align: start;
+  color: white;
+  
+}
+
+.loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #e84a277b;
+  border-radius: 50%;
+  border-top-color: #e84a27;
+  align-self: center;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+#loading-schedule{
+  border: 3px solid #e84a277b;
+  border-top-color: #e84a27;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+.table-color {
+  background-color: #eee;
+}
+
+.career-fact {
+  padding: 0px 100px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wave-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 36px;
+  height: 100vh;
+  width: auto;
+  position: relative;
+  align-items: center;
+}
+
+.info-facts {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  z-index: 20;
+  /* padding-top: 10%; */
+}
+
+.info-facts a {color: inherit;}
+svg {
+  width: 100%;
+  height: auto;
+}
+
+.info-facts img {
+  width: 5em;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info {
+  text-align: center;
+  color: #13294b;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 1em;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.date-location {
+  padding-top: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.orange {
+  color: #e84a27;
+}
+
+#content_header {
+  color: #e84a27;
+  text-transform: uppercase;
+  font-size: 2em;
+  padding-top: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.volunteer {
+  background-color: #eee;
+}
+
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+  background-image: linear-gradient(to top, #13294b 20%, #13294b 80%);
+}
+.bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+.bgBottom {
+  z-index: 5;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveTop {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.waveMiddle {
+  background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}
+
+#building {
+  padding-left: 36px;
+}
+
+.footer {
+  background-color: #13294b;
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 2em;
+}
+
+.footer p {
+  position: relative;
+}
+
+.footer a {
+  color: gray;
+}
+
+.uiuclogo {
+  margin: 5%;
+}
+
+.sociallink {
+  width: 2em;
+  height: 2em;
+  float: right;
+  margin-right: 1em;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.navlogo {
+  margin-left: 1em;
+  width: 4em;
+  height: 4em;
+}
+/*Team Profile related styling*/
+.team-container{
+  display: flex;
+  flex-direction: column;
+}
+.role-title{
+  padding-top: 1em;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  color: #13294b;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 1px;
+  font-size: x-large;
+  text-shadow: #13294b;
+  font-weight: bolder;
+}
+
+.role-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+
+}
+
+.person-container{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  max-height: 300px;
+  margin: 5%;
+}
+
+.person-img{
+  border: 2px solid rgba(125, 125, 125, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  height: 233px;
+  object-fit: cover;
+}
+.person-title{
+  padding-top: 5%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+#calendar-icon{
+  height: auto;
+}
